@@ -7,27 +7,52 @@
     <link rel="stylesheet" href="../css/login-login-styles.css">
 </head>
 <body>
-    <?php 
-        $username = '';
-        $password = '';
-        $error_message = '';
+<?php 
+$username = '';
+$error_message = '';
 
-        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            function test_input($data) {
-                $data = stripslashes($data);
-                $data = trim($data);
-                $data = htmlspecialchars($data);
-                return $data;
-            }
-    
-            $username = test_input($_POST['username']);
-            $password = test_input($_POST['password']);
-    
-            if (!preg_match('/[A-Z]/', $password) || !preg_match('/[\W_]/', $password)) {
-                $error_message = "*atleast one capital and special char";
-            }
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    function test_input($data) {
+        $data = stripslashes($data);
+        $data = trim($data);
+        $data = htmlspecialchars($data);
+        return $data;
+    }
+
+    $username = test_input($_POST['username']);
+    $password = test_input($_POST['password']);
+
+    if (!preg_match('/^(?=.*[A-Z])(?=.*[\W_]).{8,}$/', $password)) {
+        $error_message = "* Password must be at least 8 characters long, with one uppercase and one special character.";
+    } else {
+        $conn = new mysqli("localhost", "root", "", "diode");
+        if ($conn->connect_error) {
+            die("Connection failed: " . $conn->connect_error);
         }
-    ?>
+
+        $stmt = $conn->prepare("SELECT password FROM signin WHERE username = ?");
+        $stmt->bind_param("s", $username);
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        if ($result->num_rows > 0) {
+            $row = $result->fetch_assoc();
+            if (password_verify($password, $row['password'])) {
+                header("Location: dashboard.php");
+                exit();
+            } else {
+                $error_message = "* Incorrect password.";
+            }
+        } else {
+            $error_message = "* Username not found.";
+        }
+
+        $stmt->close();
+        $conn->close();
+    }
+}
+?>
+
     
     <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST">
         <div id="login-container">
