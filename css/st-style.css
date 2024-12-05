@@ -59,7 +59,7 @@ body {
 
 /* Checkbox styling */
 .option input[type="checkbox"] {
-    margin-right: 10px;
+    margin-right: 5px;
 }
 
 /* Label for checkboxes */
