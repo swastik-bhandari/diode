@@ -8,6 +8,7 @@
 </head>
 <body>
 <?php 
+session_start();
 $usernameerr = $passworderr = ""; // Initialize error variables
 $username = $password = "";       // Initialize input variables
 
@@ -82,7 +83,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $stmt->bind_param("ss", $username, $hashedPassword);
 
         if ($stmt->execute()) {
-            echo "New record successfully inserted.";
+            $_SESSION["username"] = $username;
+            header("Location:login-login.php");
+            exit();
         } else {
             echo "Error inserting data: " . $stmt->error;
         }
