@@ -95,7 +95,7 @@ body {
     color : red;
 }
 
-#signup {
+#login {
     /* Positioning */
     position: fixed;
     bottom: 20px; /* Distance from the bottom of the screen */
@@ -113,12 +113,12 @@ body {
     transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth hover effects */
 }
 
-#signup:hover {
+#login:hover {
     background-color: #00739E; /* Your specified hover color */
     transform: scale(1.05); /* Slight scale on hover */
 }
 
-#signup:active {
+#login:active {
     background-color: #005f73; /* Slightly darker for active click state */
     transform: scale(0.95); /* Pressed-in effect */
 }

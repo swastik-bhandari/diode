@@ -49,7 +49,6 @@
         <button id="message-btn">Message</button>
         <button id="schedule-btn">Instant Scheduling</button>
     </div>
-
     <script src="../js/mp-script.js"></script>
 </body>
 </html>

@@ -98,7 +98,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 <form method="POST" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>">
     <div id="login-container">
-        <h2>Login</h2>
+        <h2>Sign up</h2>
 
         <!-- Username Input -->
         <div class="input-group">
@@ -118,18 +118,23 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         <!-- Show Password -->
         <div class="input-group" id="showpassword">
-            <label for="show-password">Show Password</label>
-            <input type="checkbox" id="show-password" onclick="togglePasswordVisibility()">
+            <div>
+                <label for="show-password">Show Password</label>
+            </div>
+            <div>
+                <input type="checkbox" id="show-password" onclick="togglePassword()">
+            </div>
         </div>
 
         <!-- Submit Button -->
         <div class="input-group">
-            <button type="submit" class="button" id="login-btn">Login</button>
+            <button type="submit" class="button" id="login-btn">Sign up</button>
         </div>
     </div>
 </form>
 
-<script src="../login-signup-script.js"></script>
+<a href="#" id="login">Login</a>
+<script src="../js/login-signup-script.js"></script>
 
 </body>
 </html>
