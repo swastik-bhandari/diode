@@ -89,12 +89,17 @@
 
                     <div class="option">
                         <input type="checkbox" id="1yto2y" name="1Yto2Y">
-                        <label for="6mto1y">1 year - 2 years</label>
+                        <label for="1yto2y">1 year - 2 years</label>
                     </div>
 
                     <div class="option">
                         <input type="checkbox" id="2yto4y" name="2Yto4Y">
-                        <label for="6mto1y">2 years - 4 years</label>
+                        <label for="2yto4y">2 years - 4 years</label>
+                    </div>
+
+                    <div class="option">
+                        <input type="checkbox" id="more4y" name="More4Y">
+                        <label for="more4y">4+ years</label>
                     </div>
                 </div>
             </div>
