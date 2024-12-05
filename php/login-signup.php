@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Find Your Mentor</title>
-    <link rel="stylesheet" href="../css/login-login-styles.css">
+    <link rel="stylesheet" href="../css/login-signup-styles.css">
 </head>
 <body>
 <?php 
@@ -129,17 +129,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     </div>
 </form>
 
-<!-- JavaScript to Toggle Password Visibility -->
-<script>
-function togglePasswordVisibility() {
-    const passwordField = document.getElementById("password");
-    if (passwordField.type === "password") {
-        passwordField.type = "text";
-    } else {
-        passwordField.type = "password";
-    }
-}
-</script>
+<script src="../login-signup-script.js"></script>
 
 </body>
 </html>

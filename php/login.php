@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Find Your Mentor</title>
-    <link rel="stylesheet" href="login-styles.css">
+    <link rel="stylesheet" href="../css/login-styles.css">
 </head>
 <body>
     <div id="title">
@@ -15,6 +15,6 @@
         <button id="btn">Log In / Register</button>
     </div>
 
-    <script src="login-script.js"></script>
+    <script src="../js/login-script.js"></script>
 </body>
 </html>
