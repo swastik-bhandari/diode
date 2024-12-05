@@ -1,0 +1,148 @@
+/* Global Reset */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General Body Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f9;
+    color: #000000;
+    padding: 20px;
+}
+
+/* Results Header */
+#header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+/* Title Styling */
+#header h1 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* Mentor Cards Container */
+.results {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+/* Mentor Card Styling */
+.mentor-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.mentor-card:hover {
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px);
+    cursor: pointer;
+}
+
+/* Mentor Header */
+.mentor-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mentor-name {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.mentor-rank {
+    background-color: #008CBA;
+    color: white;
+    padding: 4px 10px;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+/* Mentor Details */
+.mentor-details {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    color: #555;
+}
+
+.mentor-details li {
+    font-size: 1rem;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center; /* Ensures both label and value are aligned vertically */
+    padding: 10px 0; /* Ensures padding is consistent */
+}
+
+/* Labels */
+.mentor-details li strong {
+    font-weight: bold;
+    min-width: 180px; /* Ensures labels (e.g. 'Name') align consistently */
+}
+
+/* Values */
+.mentor-details li span {
+    font-weight: normal;
+    flex-grow: 1; /* Ensures the values are pushed to the right side */
+}
+
+/* Styling alternating background colors */
+.mentor-details li:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+
+.mentor-details li:nth-child(even) {
+    background-color: #fff;
+}
+
+/* Mentor Button Styling */
+.mentor-card button {
+    padding: 10px 20px;
+    background-color: #008CBA;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.mentor-card button:hover {
+    background-color: #00739E;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 800px) {
+    .results {
+        margin-top: 30px;
+    }
+
+    .mentor-card {
+        padding: 15px;
+    }
+
+    .mentor-name {
+        font-size: 1.2rem;
+    }
+
+    .mentor-rank {
+        font-size: 0.9rem;
+    }
+}
