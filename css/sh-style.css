@@ -61,6 +61,7 @@ body {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
+    margin-bottom: 30px;
 }
 
 /* Category title style */
@@ -70,10 +71,8 @@ body {
     margin-bottom: 10px;
 }
 
-.options, .date-and-time{
+.options {
     display: flex;
-    flex-direction: row;
-    font-size: 16px;
     flex-direction: row;
     flex-wrap: wrap;
     gap: 30px;
@@ -82,4 +81,30 @@ body {
 /* Options section (checkboxes) */
 .option input[type="checkbox"] {
     margin-right: 5px;
+}
+
+
+#cat4 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Time input styles */
+#cat4 .option input[type="time"] {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+/* Styling the availability section header */
+#cat4 .category-type {
+    margin-bottom: 20px;
+}
+
+#time {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
 }

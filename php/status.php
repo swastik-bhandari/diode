@@ -135,18 +135,16 @@
                     </div>
                 </div>
             
-                <div class="option">
-                    <label for="start-time">Start Time:</label>
-                    <input type="time" id="start-time" name="start-time">
+                <div id="time">
+                    <div class="option">
+                        <label for="start-time">Start Time:</label>
+                        <input type="time" id="start-time" name="start-time">
+                    </div>
+                    <div class="option">
+                        <label for="end-time">End Time:</label>
+                        <input type="time" id="end-time" name="end-time">
+                    </div>
                 </div>
-                <div class="option">
-                    <label for="end-time">End Time:</label>
-                    <input type="time" id="end-time" name="end-time">
-                </div>
-                </div>
-            </div>
-            
-
             </div>
         </div>
         <script src="../js/st-script.js"></script>

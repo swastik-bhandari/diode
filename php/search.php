@@ -137,19 +137,43 @@
                 </div>
             </div>
 
-            <div id="cat5" class="cat">
+            <div id="cat4" class="cat">
                 <div class="category-type">
                     <p>Availability:</p>
                 </div>
-                <div class="date-and-time">
+
+                <div class="options">
                     <div class="option">
-                        <label for="start-date">Start Date:</label>
-                        <input type="date" id="start-date" name="start-date">
+                        <input type="checkbox" id="sunday" name="days" value="sunday">
+                        <label for="sunday">Sunday</label>
                     </div>
                     <div class="option">
-                        <label for="end-date">End Date:</label>
-                        <input type="date" id="end-date" name="end-date">
+                        <input type="checkbox" id="monday" name="days" value="monday">
+                        <label for="monday">Monday</label>
                     </div>
+                    <div class="option">
+                        <input type="checkbox" id="tuesday" name="days" value="tuesday">
+                        <label for="tuesday">Tuesday</label>
+                    </div>
+                    <div class="option">
+                        <input type="checkbox" id="wednesday" name="days" value="wednesday">
+                        <label for="wednesday">Wednesday</label>
+                    </div>
+                    <div class="option">
+                        <input type="checkbox" id="thursday" name="days" value="thursday">
+                        <label for="thursday">Thursday</label>
+                    </div>
+                    <div class="option">
+                        <input type="checkbox" id="friday" name="days" value="friday">
+                        <label for="friday">Friday</label>
+                    </div>
+                    <div class="option">
+                        <input type="checkbox" id="saturday" name="days" value="saturday">
+                        <label for="saturday">Saturday</label>
+                    </div>
+                </div>
+            
+                <div id="time">
                     <div class="option">
                         <label for="start-time">Start Time:</label>
                         <input type="time" id="start-time" name="start-time">
