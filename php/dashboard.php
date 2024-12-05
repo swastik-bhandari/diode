@@ -4,15 +4,16 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Find Your Mentor</title>  
-        <link rel="stylesheet" href="db-styles.css">
+        <link rel="stylesheet" href="../css/db-styles.css">
     </head>
     <body>
         <div id = "db-profile">
             <button id = "profile-btn">Profile</button>
             <div id="dropdown">
-                <a href="#">Points</a>
-                <a href="#">Ranks</a>
-                <a href="#">Log Out</a>
+            <a href="#" id="a">Status</a>
+            <a href="#" id="b">Points</a>
+            <a href="#" id="c">Ranks</a>
+            <a href="#" id="d">Log Out</a>
             </div>
         </div>
 
@@ -58,6 +59,6 @@
             </div>
         </div>
 
-        <script src="db-script.js"></script>
+        <script src="../js/db-script.js"></script>
     </body>
 </html>

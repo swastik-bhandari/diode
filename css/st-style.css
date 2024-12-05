@@ -1,0 +1,89 @@
+/* Global Reset */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General Body Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f9;
+    color: #000000;
+    padding: 20px;
+}
+
+/* Main category section container */
+#st-categories {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding-top: 50px;
+}
+
+/* Individual category container */
+.cat {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Category title style */
+.category-type {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Options section (checkboxes) */
+.options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    flex-direction: row;
+}
+
+/* Flexbox layout for each option */
+.option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Checkbox styling */
+.option input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+/* Label for checkboxes */
+.option label {
+    font-size: 16px;
+}
+
+/* Style for each category container */
+#cat1, #cat2, #cat3, #cat4 {
+    margin-bottom: 30px;
+}
+
+/* Style for availability section (checkboxes) */
+
+
+/* Time input styles */
+#cat4 .option input[type="time"] {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+/* Styling the availability section header */
+#cat4 .category-type {
+    margin-bottom: 20px;
+}
