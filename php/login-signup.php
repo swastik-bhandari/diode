@@ -8,13 +8,15 @@
 </head>
 <body>
 <?php 
-session_start();
+
 $usernameerr = $passworderr = ""; // Initialize error variables
 $username = $password = "";       // Initialize input variables
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $username = trim($_POST['username']);
+    $username = stripcslashes($_POST['username']);
     $password = trim($_POST['password']);
+    $password = stripcslashes($_POST['password']);
 
     // Function to validate the password
     function check_password($password) {
@@ -83,9 +85,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $stmt->bind_param("ss", $username, $hashedPassword);
 
         if ($stmt->execute()) {
-            $_SESSION["username"] = $username;
-            header("Location:login-login.php");
-            exit();
+  
+         $stmt->close();
+        $conn->close();
+         header("Location:login-login.php");
         } else {
             echo "Error inserting data: " . $stmt->error;
         }
@@ -98,7 +101,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 <form method="POST" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>">
     <div id="login-container">
+<<<<<<< HEAD
         <h2>Sign up</h2>
+=======
+        <h2>Sign-up</h2>
+>>>>>>> 26016b8be46bba32c7bdb1a47496f64cfb75a5b2
 
         <!-- Username Input -->
         <div class="input-group">
@@ -128,7 +135,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         <!-- Submit Button -->
         <div class="input-group">
+<<<<<<< HEAD
             <button type="submit" class="button" id="login-btn">Sign up</button>
+=======
+            <button type="submit" class="button" id="login-btn">Sign-up</button>
+>>>>>>> 26016b8be46bba32c7bdb1a47496f64cfb75a5b2
         </div>
     </div>
 </form>

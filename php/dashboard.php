@@ -1,3 +1,5 @@
+<?php
+        session_start();?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -7,6 +9,16 @@
         <link rel="stylesheet" href="../css/db-styles.css">
     </head>
     <body>
+        <?php
+    
+    
+        if (!isset($_SESSION['username'])) {
+            header("Location:login-signup.php");
+            exit();
+        }
+        
+        
+        ?>
         <div id = "db-profile">
             <button id = "profile-btn">Profile</button>
             <div id="dropdown">
@@ -18,12 +30,14 @@
         </div>
 
         <div id = "db-greet">
-            <h1>Welcome Back, Adarsha!</h1>
+            <h1>
+                <?php echo "Welcome back".$_SESSION['username']?>
+            </h1>
         </div>
 
         <div id = "db-user-info">
             <div id = "user-name">
-                Adarsha Ghimire
+            <?php echo $_SESSION['username']?>
             </div> 
             <div id = "user-rank">
                 Student
@@ -53,7 +67,7 @@
                     <p>Are you sure you want to log out?</p>
                 </div>
                 <div class="modal-buttons">
-                    <button id="confirm-logout">Yes</button>
+                    <a href="login-login.php"><button id="confirm-logout">Yes</button></a>
                     <button id="cancel-logout">No</button>
                 </div>
             </div>
