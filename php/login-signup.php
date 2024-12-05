@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="login-login-styles.css">
 </head>
 <body>
+    <form action="" method="POST"></form>
     <div id="login-container">
         <div><h2>Login</h2></div>
 
@@ -25,9 +26,6 @@
             <div><input type="checkbox" id="show-password"> </div>
         </div>
 
-        <div class="input-group">
-            <button class="button" id="login-btn">Log In</button>
-        </div>
 
         <div class="input-group">
             <button class="button" id="register-btn">Register</button>
