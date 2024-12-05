@@ -101,12 +101,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 <form method="POST" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>">
     <div id="login-container">
-<<<<<<< HEAD
-        <h2>Sign up</h2>
-=======
         <h2>Sign-up</h2>
->>>>>>> 26016b8be46bba32c7bdb1a47496f64cfb75a5b2
-
         <!-- Username Input -->
         <div class="input-group">
             <label for="username">Username</label>
@@ -135,11 +130,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         <!-- Submit Button -->
         <div class="input-group">
-<<<<<<< HEAD
-            <button type="submit" class="button" id="login-btn">Sign up</button>
-=======
             <button type="submit" class="button" id="login-btn">Sign-up</button>
->>>>>>> 26016b8be46bba32c7bdb1a47496f64cfb75a5b2
         </div>
     </div>
 </form>
