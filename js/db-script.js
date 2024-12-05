@@ -17,7 +17,6 @@ const logOutModal = document.querySelector("#logout-modal");
 const logOutLink = document.querySelector("#d");
 const confirmLogout = document.querySelector("#confirm-logout");
 const cancelLogout = document.querySelector("#cancel-logout");
-const statusLink = document.querySelector("#a");
 
 // Open the modal when "Log Out" is clicked
 logOutLink.addEventListener("click", () => {
@@ -45,9 +44,17 @@ window.addEventListener("click", (event) => {
 // Note: Clicking on the modal content will not trigger this event because the target of the event(event.target) 
 // will be the content inside the modal(.modal-content), not the modal background.(logOutModal) 
 
+const statusLink = document.querySelector("#a");
+const searchLink = document.querySelector("#search-bar");
+
 statusLink.addEventListener("click", () => {
-    // Redirect to another page when the search button is clicked
+    // Redirect to another page when the status button is clicked
     window.location.href = "status.php"; // Redirects to a new page, you can change the URL here
+});
+
+searchLink.addEventListener("click", () => {
+    // Redirect to another page when the search button is clicked
+    window.location.href = "search.php"; // Redirects to a new page, you can change the URL here
 });
 
 

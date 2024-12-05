@@ -1,6 +1,8 @@
-
 function togglePasswordVisibility() {
     const passwordField = document.getElementById("password");
-    const showPassword = document.getElementById("show-password");
-    passwordField.type = showPassword.checked ? "text" : "password";
+    if (passwordField.type === "password") {
+        passwordField.type = "text";
+    } else {
+        passwordField.type = "password";
+    }
 }
