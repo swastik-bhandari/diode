@@ -49,6 +49,10 @@ statusLink.addEventListener("click", () => {
     // Redirect to another page when the search button is clicked
     window.location.href = "status.php"; // Redirects to a new page, you can change the URL here
 });
-
+function logout()
+{
+    document.getElementById('confirm-logout').innerText = "<?php  session_abort(); header('Location:login-login.php')?>";
+    
+}
 
 

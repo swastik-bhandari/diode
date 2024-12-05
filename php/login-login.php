@@ -1,3 +1,8 @@
+<?php 
+session_start();
+session_destroy();
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,7 +35,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             die("Connection failed: " . $conn->connect_error);
         }
 
-        $stmt = $conn->prepare("SELECT password FROM signin WHERE username = ?");
+        $stmt = $conn->prepare("SELECT password FROM user_info WHERE username = ?");
         $stmt->bind_param("s", $username);
         $stmt->execute();
         $result = $stmt->get_result();
@@ -38,6 +43,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if ($result->num_rows > 0) {
             $row = $result->fetch_assoc();
             if (password_verify($password, $row['password'])) {
+                /// session to be handeled
+                $_SESSION['username'] = $username;
                 header("Location: dashboard.php");
                 exit();
             } else {

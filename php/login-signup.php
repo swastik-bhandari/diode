@@ -85,7 +85,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $stmt->bind_param("ss", $username, $hashedPassword);
 
         if ($stmt->execute()) {
-         
+  
+         $stmt->close();
+        $conn->close();
+         header("Location:login-login.php");
         } else {
             echo "Error inserting data: " . $stmt->error;
         }
