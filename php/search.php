@@ -107,6 +107,11 @@
                         <input type="checkbox" id="more4y" name="More4Y">
                         <label for="more4y">4+ years</label>
                     </div>
+
+                    <div class="option">
+                        <input type="checkbox" id="any" name="any">
+                        <label for="any">any</label>
+                    </div>
                 </div>
             </div>
 
@@ -137,7 +142,7 @@
 
                     <div class="option">
                         <input type="checkbox" id="any" name="any">
-                        <label for="6mto1y">any</label>
+                        <label for="any">any</label>
                     </div>
                 </div>
             </div>
