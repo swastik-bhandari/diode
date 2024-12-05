@@ -1,0 +1,85 @@
+/* Global Reset */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General Body Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f9;
+    color: #000000;
+    padding: 20px;
+}
+
+/* Container for the search section */
+#sh-search {
+    display: flex;
+    align-items: row;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 30px;
+    margin-bottom: 100px;
+}
+
+#search-bar {
+    width: 75%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#search-btn {
+    padding: 10px 20px;
+    background-color: #008CBA;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#search-btn:hover {
+    background-color: #00739E;
+}
+
+/* Main category section container */
+#sh-categories {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Individual category container */
+.cat {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Category title style */
+.category-type {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.options, .date-and-time{
+    display: flex;
+    flex-direction: row;
+    font-size: 16px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+/* Options section (checkboxes) */
+.option input[type="checkbox"] {
+    margin-right: 5px;
+}
