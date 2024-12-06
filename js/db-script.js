@@ -46,13 +46,16 @@ window.addEventListener("click", (event) => {
 // will be the content inside the modal(.modal-content), not the modal background.(logOutModal) 
 
 statusLink.addEventListener("click", () => {
-    // Redirect to another page when the search button is clicked
-    window.location.href = "status.php"; // Redirects to a new page, you can change the URL here
+    window.location.href = "status.php"; 
 });
-function logout()
-{
-    document.getElementById('confirm-logout').innerText = "<?php  session_abort(); header('Location:login-login.php')?>";
-    
+
+const inputField = document.getElementById('search-bar');
+
+
+inputField.addEventListener('focus', function() {
+    myFunction(); 
+});
+
+function myFunction() {
+  window.location.href = "../php/search.php";  
 }
-
-

@@ -8,7 +8,7 @@
         <title>Find Your Mentor</title>  
         <link rel="stylesheet" href="../css/db-styles.css">
     </head>
-    <body>
+    <div>
         <?php
     
     
@@ -19,6 +19,7 @@
         
         
         ?>
+     
         <div id = "db-profile">
             <button id = "profile-btn">Profile</button>
             <div id="dropdown">
@@ -40,7 +41,7 @@
             <?php echo $_SESSION['username']?>
             </div> 
             <div id = "user-rank">
-                Student
+    <!----     dynamically change the data lol -->
             </div>
         </div>
 
@@ -62,7 +63,7 @@
 
         <!-- Custom Modal for Logout Confirmation -->
         <div id="logout-modal" class="modal">
-            <div class="modal-content">
+            <div class= "modal-content">
                 <div class="modal-text">
                     <p>Are you sure you want to log out?</p>
                 </div>
@@ -73,6 +74,7 @@
             </div>
         </div>
 
+    
         <script src="../js/db-script.js"></script>
     </body>
 </html>

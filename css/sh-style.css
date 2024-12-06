@@ -15,7 +15,9 @@ body {
     color: #000000;
     padding: 20px;
 }
-
+img{
+    display:block;
+}
 /* Container for the search section */
 #sh-search {
     display: flex;
@@ -82,4 +84,60 @@ body {
 /* Options section (checkboxes) */
 .option input[type="checkbox"] {
     margin-right: 5px;
+}
+.second-div{
+
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    padding:1.5rem;
+    gap:1.5rem;
+    font-size: 1.5rem;
+    font-weight:800;
+    font-family:monospace;
+   
+}
+
+.second-div-person{
+    /* Allow flexible sizing, fits 3 items per row */
+    margin :auto;
+    width:fit-content; /* Ensure items don't shrink too small */
+    padding: 1.5rem;
+    border-radius: 10px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 2px 4px 5px 1px gray;
+    text-align: center; /* Center content */
+}
+.figcaption-name{
+    margin-top: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+.second-div figure{
+    display:flex;
+    flex-flow:row ;
+}
+.second-div img{
+    width:150px;
+    height:auto;
+    border-radius:50%;
+    border:2px solid black;
+   margin:auto; 
+
+}
+
+.second-div span{
+    display:block;
+    margin-top: 5px;
+    font-size: 1rem;
+   
+}
+body{
+    display:flex;
+    flex-direction:column;
+}
+.first-form{
+    order:1;
 }
