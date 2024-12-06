@@ -48,19 +48,16 @@ const statusLink = document.querySelector("#a");
 const searchLink = document.querySelector("#search-bar");
 
 statusLink.addEventListener("click", () => {
-    // Redirect to another page when the status button is clicked
-    window.location.href = "status.php"; // Redirects to a new page, you can change the URL here
+    window.location.href = "status.php"; 
 });
 
-searchLink.addEventListener("click", () => {
-    // Redirect to another page when the search button is clicked
-    window.location.href = "search.php"; // Redirects to a new page, you can change the URL here
+const inputField = document.getElementById('search-bar');
+
+
+inputField.addEventListener('focus', function() {
+    myFunction(); 
 });
 
-function logout()
-{
-    document.getElementById('confirm-logout').innerText = "<?php  session_abort(); header('Location:login-login.php')?>";
-    
+function myFunction() {
+  window.location.href = "../php/search.php";  
 }
-
-
